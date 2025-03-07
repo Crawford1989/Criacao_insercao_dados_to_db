@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, Column, Integer, String, Date, DECIMAL, ForeignKey
-from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-
+from sqlalchemy.orm import relationship
+from db_conncet import engine
 
 Base = declarative_base()
 
@@ -26,7 +26,7 @@ class CentroCusto(Base):
     StatusAtivo = Column(String(3))
     
 #Tabela Movimento Contabil
-class MovContabil(Base):
+class MovimentoContabil(Base):
     __tablename__ = 'movimento_contabil'
     id_mc = Column(Integer, primary_key=True)
     data = Column(Date)
@@ -41,8 +41,6 @@ class MovContabil(Base):
     centro_custo = relationship('CentroCusto')
     
     
-    
-engine = create_engine('mysql+mysqlconnector://root:admin@localhost/extracao_teste')
 
 Base.metadata.create_all(engine)
 
