@@ -40,9 +40,9 @@ class MovimentoContabil(Base):
     empresa = relationship('Empresa')
     centro_custo = relationship('CentroCusto')
     
-    
 
-Base.metadata.create_all(engine)
 
-print('Tabelas criadas com sucesso!')
 
+if __name__ == "__main__":
+    Base.metadata.create_all(engine)
+    print('Tabelas criadas com sucesso!')
