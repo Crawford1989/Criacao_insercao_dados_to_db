@@ -1,0 +1,52 @@
+# Arquivos do Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+
+# Diretórios do ambiente virtual (para evitar que o ambiente virtual seja versionado)
+venv/
+env/
+.venv/
+.env/
+venv_transformacao/
+
+# Arquivos de configuração do IDE
+.vscode/
+.idea/
+
+# Arquivos de logs
+*.log
+
+# Arquivos temporários do sistema operacional
+*.bak
+*.swp
+*~
+Thumbs.db
+
+# Arquivos de banco de dados temporários
+*.sql
+*.sql.gz
+
+# Arquivos de pacotes Python
+*.egg
+*.egg-info/
+
+# Arquivos gerados pelo MySQL
+*.pid
+*.err
+*.log
+
+# Arquivos de configuração do Docker
+.docker/
+
+# Arquivos do Jupyter (se for usar no projeto)
+.ipynb_checkpoints/
+
+# Arquivos de backup de editores de texto
+*~ 
+
+# Arquivos do sistema operacional
+.DS_Store
