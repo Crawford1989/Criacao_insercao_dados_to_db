@@ -33,15 +33,14 @@ class MovimentoContabil(Base):
     conta_contabil = Column(String(20))
     status_conta = Column(String(50))
     valor = Column(DECIMAL(10,2))
-    id_relatorio = Column(Integer, ForeignKey('relatorio.relatorio_id'))
-    id_empresa = Column(Integer, ForeignKey('empresa.empresa_id'))
-    id_centCusto = Column(Integer, ForeignKey('centro_custo.centCusto_id'))
+    relatorio_id = Column(Integer, ForeignKey('relatorio.relatorio_id'))
+    empresa_id = Column(Integer, ForeignKey('empresa.empresa_id'))
+    centCusto_id = Column(Integer, ForeignKey('centro_custo.centCusto_id'))  
     relatorio = relationship('Relatorio')
     empresa = relationship('Empresa')
     centro_custo = relationship('CentroCusto')
+
     
-
-
 
 if __name__ == "__main__":
     Base.metadata.create_all(engine)
